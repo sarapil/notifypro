@@ -1,0 +1,61 @@
+{
+  "name": "NP Notification Category",
+  "module": "Preferences",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:category_name",
+  "fields": [
+    {
+      "fieldname": "category_name",
+      "fieldtype": "Data",
+      "label": "Category Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "default_channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Default Channel"
+    },
+    {
+      "fieldname": "allow_opt_out",
+      "fieldtype": "Check",
+      "label": "Allow Opt-Out",
+      "default": "1"
+    },
+    {
+      "fieldname": "icon",
+      "fieldtype": "Data",
+      "label": "Icon"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

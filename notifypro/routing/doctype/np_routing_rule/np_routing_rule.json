@@ -1,0 +1,92 @@
+{
+  "name": "NP Routing Rule",
+  "module": "Routing",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:rule_name",
+  "fields": [
+    {
+      "fieldname": "rule_name",
+      "fieldtype": "Data",
+      "label": "Rule Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Int",
+      "label": "Priority",
+      "default": "10"
+    },
+    {
+      "fieldname": "sb_match",
+      "fieldtype": "Section Break",
+      "label": "Match Conditions"
+    },
+    {
+      "fieldname": "match_doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "label": "Match DocType"
+    },
+    {
+      "fieldname": "match_event",
+      "fieldtype": "Select",
+      "options": "\non_update\non_submit\non_cancel\nafter_insert",
+      "label": "Match Event"
+    },
+    {
+      "fieldname": "match_priority",
+      "fieldtype": "Select",
+      "options": "\nLow\nMedium\nHigh\nCritical",
+      "label": "Match Priority"
+    },
+    {
+      "fieldname": "sb_target",
+      "fieldtype": "Section Break",
+      "label": "Target Channel"
+    },
+    {
+      "fieldname": "target_channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Target Channel",
+      "reqd": 1
+    },
+    {
+      "fieldname": "fallback_channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Fallback Channel"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

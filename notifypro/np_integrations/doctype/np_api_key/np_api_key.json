@@ -1,0 +1,77 @@
+{
+  "name": "NP API Key",
+  "module": "NP Integrations",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:key_name",
+  "fields": [
+    {
+      "fieldname": "key_name",
+      "fieldtype": "Data",
+      "label": "Key Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Data",
+      "label": "API Key",
+      "read_only": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "user",
+      "fieldtype": "Link",
+      "options": "User",
+      "label": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "rate_limit",
+      "fieldtype": "Int",
+      "label": "Rate Limit/min",
+      "default": "60"
+    },
+    {
+      "fieldname": "permissions",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "label": "Permissions"
+    },
+    {
+      "fieldname": "last_used_at",
+      "fieldtype": "Datetime",
+      "label": "Last Used At",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

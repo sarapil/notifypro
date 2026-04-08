@@ -1,0 +1,71 @@
+{
+  "name": "NP Digest",
+  "module": "Analytics",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "NP-DIG-{digest_type}-{digest_date}",
+  "fields": [
+    {
+      "fieldname": "digest_date",
+      "fieldtype": "Date",
+      "label": "Digest Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "digest_type",
+      "fieldtype": "Select",
+      "options": "Daily\nWeekly",
+      "label": "Digest Type",
+      "default": "Daily"
+    },
+    {
+      "fieldname": "sent_to",
+      "fieldtype": "Small Text",
+      "label": "Sent To"
+    },
+    {
+      "fieldname": "total_sent",
+      "fieldtype": "Int",
+      "label": "Total Sent"
+    },
+    {
+      "fieldname": "total_failed",
+      "fieldtype": "Int",
+      "label": "Total Failed"
+    },
+    {
+      "fieldname": "total_cost",
+      "fieldtype": "Currency",
+      "label": "Total Cost"
+    },
+    {
+      "fieldname": "content_html",
+      "fieldtype": "HTML Editor",
+      "label": "Content"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

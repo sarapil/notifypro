@@ -1,0 +1,108 @@
+{
+  "name": "NP Hook Trigger",
+  "module": "NP Hooks",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:trigger_name",
+  "fields": [
+    {
+      "fieldname": "trigger_name",
+      "fieldtype": "Data",
+      "label": "Trigger Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "source_doctype",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "label": "Source DocType",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "event",
+      "fieldtype": "Select",
+      "options": "on_update\non_submit\non_cancel\non_trash\non_change\nafter_insert",
+      "label": "Event",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "sb_conditions",
+      "fieldtype": "Section Break",
+      "label": "Conditions"
+    },
+    {
+      "fieldname": "conditions",
+      "fieldtype": "Table",
+      "options": "NP Trigger Condition",
+      "label": "Conditions"
+    },
+    {
+      "fieldname": "sb_action",
+      "fieldtype": "Section Break",
+      "label": "Action"
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Channel"
+    },
+    {
+      "fieldname": "template",
+      "fieldtype": "Link",
+      "options": "NP Template",
+      "label": "Template"
+    },
+    {
+      "fieldname": "recipient_field",
+      "fieldtype": "Data",
+      "label": "Recipient Field",
+      "description": "Field on doc containing the recipient"
+    },
+    {
+      "fieldname": "recipient_type",
+      "fieldtype": "Select",
+      "options": "Email\nPhone\nUser",
+      "label": "Recipient Type"
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "options": "Low\nMedium\nHigh\nCritical",
+      "label": "Priority",
+      "default": "Medium"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

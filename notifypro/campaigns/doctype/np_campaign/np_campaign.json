@@ -1,0 +1,133 @@
+{
+  "name": "NP Campaign",
+  "module": "Campaigns",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "NP-CAMP-.#####",
+  "fields": [
+    {
+      "fieldname": "campaign_name",
+      "fieldtype": "Data",
+      "label": "Campaign Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Draft\nScheduled\nRunning\nPaused\nCompleted\nCancelled",
+      "label": "Status",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Channel",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "template",
+      "fieldtype": "Link",
+      "options": "NP Template",
+      "label": "Template"
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "scheduled_at",
+      "fieldtype": "Datetime",
+      "label": "Scheduled At"
+    },
+    {
+      "fieldname": "started_at",
+      "fieldtype": "Datetime",
+      "label": "Started At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "sb_audience",
+      "fieldtype": "Section Break",
+      "label": "Audience"
+    },
+    {
+      "fieldname": "segment",
+      "fieldtype": "Link",
+      "options": "NP Segment",
+      "label": "Segment"
+    },
+    {
+      "fieldname": "recipient_list",
+      "fieldtype": "Table",
+      "options": "NP Campaign Recipient",
+      "label": "Recipients"
+    },
+    {
+      "fieldname": "sb_stats",
+      "fieldtype": "Section Break",
+      "label": "Statistics"
+    },
+    {
+      "fieldname": "total_sent",
+      "fieldtype": "Int",
+      "label": "Total Sent",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_delivered",
+      "fieldtype": "Int",
+      "label": "Total Delivered",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_failed",
+      "fieldtype": "Int",
+      "label": "Total Failed",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_read",
+      "fieldtype": "Int",
+      "label": "Total Read",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_cost",
+      "fieldtype": "Currency",
+      "label": "Total Cost",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

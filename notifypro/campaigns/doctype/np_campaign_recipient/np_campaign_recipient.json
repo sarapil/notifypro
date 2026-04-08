@@ -1,0 +1,60 @@
+{
+  "name": "NP Campaign Recipient",
+  "module": "Campaigns",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "autoincrement",
+  "autoname": "",
+  "fields": [
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Data",
+      "label": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "recipient_name",
+      "fieldtype": "Data",
+      "label": "Recipient Name",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Pending\nSent\nDelivered\nFailed",
+      "label": "Status",
+      "default": "Pending",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "message",
+      "fieldtype": "Link",
+      "options": "NP Message",
+      "label": "Message"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

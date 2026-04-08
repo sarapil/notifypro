@@ -1,0 +1,104 @@
+{
+  "name": "NP Settings",
+  "module": "NP Settings",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 1,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "autoincrement",
+  "autoname": "",
+  "fields": [
+    {
+      "fieldname": "default_channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Default Channel"
+    },
+    {
+      "fieldname": "queue_batch_size",
+      "fieldtype": "Int",
+      "label": "Queue Batch Size",
+      "default": "100"
+    },
+    {
+      "fieldname": "max_retries",
+      "fieldtype": "Int",
+      "label": "Max Retries",
+      "default": "3"
+    },
+    {
+      "fieldname": "retry_interval_minutes",
+      "fieldtype": "Int",
+      "label": "Retry Interval (min)",
+      "default": "5"
+    },
+    {
+      "fieldname": "sb_auto_capture",
+      "fieldtype": "Section Break",
+      "label": "Auto-Capture"
+    },
+    {
+      "fieldname": "auto_capture_doc_events",
+      "fieldtype": "Check",
+      "label": "Auto-Capture Doc Events",
+      "default": "0"
+    },
+    {
+      "fieldname": "enable_analytics",
+      "fieldtype": "Check",
+      "label": "Enable Analytics",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_cost",
+      "fieldtype": "Section Break",
+      "label": "Cost Tracking"
+    },
+    {
+      "fieldname": "enable_cost_tracking",
+      "fieldtype": "Check",
+      "label": "Enable Cost Tracking"
+    },
+    {
+      "fieldname": "monthly_budget_limit",
+      "fieldtype": "Currency",
+      "label": "Monthly Budget Limit"
+    },
+    {
+      "fieldname": "sb_digest",
+      "fieldtype": "Section Break",
+      "label": "Digest"
+    },
+    {
+      "fieldname": "enable_daily_digest",
+      "fieldtype": "Check",
+      "label": "Enable Daily Digest"
+    },
+    {
+      "fieldname": "digest_recipients",
+      "fieldtype": "Small Text",
+      "label": "Digest Recipients"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "name": "NP Template",
+  "module": "Templates",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:template_name",
+  "fields": [
+    {
+      "fieldname": "template_name",
+      "fieldtype": "Data",
+      "label": "Template Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "channel_type",
+      "fieldtype": "Select",
+      "options": "\nEmail\nSMS\nWhatsApp\nTelegram\nPush\nIn-App\nAll",
+      "label": "Channel Type"
+    },
+    {
+      "fieldname": "language",
+      "fieldtype": "Link",
+      "options": "Language",
+      "label": "Language"
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_content",
+      "fieldtype": "Section Break",
+      "label": "Content"
+    },
+    {
+      "fieldname": "subject_template",
+      "fieldtype": "Data",
+      "label": "Subject Template"
+    },
+    {
+      "fieldname": "body_template",
+      "fieldtype": "Code",
+      "label": "Body Template (Jinja)",
+      "options": "Jinja"
+    },
+    {
+      "fieldname": "sb_vars",
+      "fieldtype": "Section Break",
+      "label": "Variables"
+    },
+    {
+      "fieldname": "variables",
+      "fieldtype": "Table",
+      "options": "NP Template Variable",
+      "label": "Variables"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

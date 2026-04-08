@@ -1,0 +1,10 @@
+NP Settings
+NP Core
+Channels
+Templates
+Campaigns
+NP Hooks
+Preferences
+Analytics
+Routing
+NP Integrations

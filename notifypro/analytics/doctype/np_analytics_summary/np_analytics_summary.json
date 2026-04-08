@@ -1,0 +1,94 @@
+{
+  "name": "NP Analytics Summary",
+  "module": "Analytics",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "NP-STAT-{period}-{period_date}",
+  "fields": [
+    {
+      "fieldname": "period",
+      "fieldtype": "Select",
+      "options": "Daily\nWeekly\nMonthly",
+      "label": "Period",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "period_date",
+      "fieldtype": "Date",
+      "label": "Period Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Channel"
+    },
+    {
+      "fieldname": "sb_counts",
+      "fieldtype": "Section Break",
+      "label": "Counts"
+    },
+    {
+      "fieldname": "total_sent",
+      "fieldtype": "Int",
+      "label": "Total Sent"
+    },
+    {
+      "fieldname": "total_delivered",
+      "fieldtype": "Int",
+      "label": "Total Delivered"
+    },
+    {
+      "fieldname": "total_failed",
+      "fieldtype": "Int",
+      "label": "Total Failed"
+    },
+    {
+      "fieldname": "total_read",
+      "fieldtype": "Int",
+      "label": "Total Read"
+    },
+    {
+      "fieldname": "delivery_rate",
+      "fieldtype": "Percent",
+      "label": "Delivery Rate"
+    },
+    {
+      "fieldname": "read_rate",
+      "fieldtype": "Percent",
+      "label": "Read Rate"
+    },
+    {
+      "fieldname": "total_cost",
+      "fieldtype": "Currency",
+      "label": "Total Cost"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

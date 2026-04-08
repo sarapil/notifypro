@@ -1,0 +1,10 @@
+{
+  "app": "notifypro",
+  "label": "NotifyPro",
+  "icon": "bell",
+  "color": "#7C3AED",
+  "languages": [
+    "en",
+    "ar"
+  ]
+}

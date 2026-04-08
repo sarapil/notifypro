@@ -1,0 +1,83 @@
+{
+  "name": "NP Batch Job",
+  "module": "NP Core",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "NP-BATCH-.#####",
+  "fields": [
+    {
+      "fieldname": "job_name",
+      "fieldtype": "Data",
+      "label": "Job Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Pending\nRunning\nCompleted\nFailed",
+      "label": "Status",
+      "default": "Pending",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "total_messages",
+      "fieldtype": "Int",
+      "label": "Total Messages",
+      "read_only": 1
+    },
+    {
+      "fieldname": "processed_count",
+      "fieldtype": "Int",
+      "label": "Processed Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "failed_count",
+      "fieldtype": "Int",
+      "label": "Failed Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "started_at",
+      "fieldtype": "Datetime",
+      "label": "Started At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "campaign",
+      "fieldtype": "Link",
+      "options": "NP Campaign",
+      "label": "Campaign"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "name": "NP Channel Provider",
+  "module": "Channels",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:provider_name",
+  "fields": [
+    {
+      "fieldname": "provider_name",
+      "fieldtype": "Data",
+      "label": "Provider Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "channel_type",
+      "fieldtype": "Select",
+      "options": "Email\nSMS\nWhatsApp\nTelegram\nPush\nSlack\nWebhook",
+      "label": "Channel Type",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "provider_class",
+      "fieldtype": "Data",
+      "label": "Provider Class",
+      "description": "Python dotted path to provider class"
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "sb_credentials",
+      "fieldtype": "Section Break",
+      "label": "Credentials"
+    },
+    {
+      "fieldname": "api_key",
+      "fieldtype": "Password",
+      "label": "API Key"
+    },
+    {
+      "fieldname": "api_secret",
+      "fieldtype": "Password",
+      "label": "API Secret"
+    },
+    {
+      "fieldname": "base_url",
+      "fieldtype": "Data",
+      "label": "Base URL"
+    },
+    {
+      "fieldname": "auth_token",
+      "fieldtype": "Password",
+      "label": "Auth Token"
+    },
+    {
+      "fieldname": "sb_settings",
+      "fieldtype": "Section Break",
+      "label": "Settings"
+    },
+    {
+      "fieldname": "timeout_seconds",
+      "fieldtype": "Int",
+      "label": "Timeout (sec)",
+      "default": "30"
+    },
+    {
+      "fieldname": "cost_per_message",
+      "fieldtype": "Currency",
+      "label": "Cost Per Message"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

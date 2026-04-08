@@ -1,0 +1,76 @@
+{
+  "name": "NP Scheduled Message",
+  "module": "NP Core",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "NP-SCHED-.#####",
+  "fields": [
+    {
+      "fieldname": "message",
+      "fieldtype": "Link",
+      "options": "NP Message",
+      "label": "Message"
+    },
+    {
+      "fieldname": "schedule_type",
+      "fieldtype": "Select",
+      "options": "Once\nRecurring",
+      "label": "Schedule Type",
+      "reqd": 1
+    },
+    {
+      "fieldname": "scheduled_at",
+      "fieldtype": "Datetime",
+      "label": "Scheduled At"
+    },
+    {
+      "fieldname": "cron_expression",
+      "fieldtype": "Data",
+      "label": "Cron Expression",
+      "depends_on": "eval:doc.schedule_type=='Recurring'"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "options": "Active\nPaused\nCompleted\nCancelled",
+      "label": "Status",
+      "default": "Active"
+    },
+    {
+      "fieldname": "last_run",
+      "fieldtype": "Datetime",
+      "label": "Last Run",
+      "read_only": 1
+    },
+    {
+      "fieldname": "next_run",
+      "fieldtype": "Datetime",
+      "label": "Next Run",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "NP Escalation Rule",
+  "module": "Routing",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "By fieldname",
+  "autoname": "field:rule_name",
+  "fields": [
+    {
+      "fieldname": "rule_name",
+      "fieldtype": "Data",
+      "label": "Rule Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "source_channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "If Channel"
+    },
+    {
+      "fieldname": "condition",
+      "fieldtype": "Select",
+      "options": "Failed\nNot Delivered In\nBounced",
+      "label": "Condition",
+      "reqd": 1
+    },
+    {
+      "fieldname": "timeout_minutes",
+      "fieldtype": "Int",
+      "label": "Timeout (min)",
+      "default": "30"
+    },
+    {
+      "fieldname": "escalate_to_channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Escalate To Channel",
+      "reqd": 1
+    },
+    {
+      "fieldname": "max_escalations",
+      "fieldtype": "Int",
+      "label": "Max Escalations",
+      "default": "2"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

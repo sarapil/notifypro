@@ -1,0 +1,59 @@
+{
+  "name": "NP Template Variable",
+  "module": "Templates",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 1,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "autoincrement",
+  "autoname": "",
+  "fields": [
+    {
+      "fieldname": "variable_name",
+      "fieldtype": "Data",
+      "label": "Variable Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "variable_type",
+      "fieldtype": "Select",
+      "options": "String\nNumber\nDate\nLink",
+      "label": "Type",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "default_value",
+      "fieldtype": "Data",
+      "label": "Default Value",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "required",
+      "fieldtype": "Check",
+      "label": "Required",
+      "in_list_view": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

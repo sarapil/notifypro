@@ -1,0 +1,64 @@
+{
+  "name": "NP Delivery Log",
+  "module": "NP Core",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "naming_rule": "Expression",
+  "autoname": "NP-DLOG-.#####",
+  "fields": [
+    {
+      "fieldname": "message",
+      "fieldtype": "Link",
+      "options": "NP Message",
+      "label": "Message",
+      "reqd": 1
+    },
+    {
+      "fieldname": "event_type",
+      "fieldtype": "Select",
+      "options": "Queued\nSent\nDelivered\nRead\nBounced\nFailed\nRetry",
+      "label": "Event Type",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Link",
+      "options": "NP Channel",
+      "label": "Channel"
+    },
+    {
+      "fieldname": "details",
+      "fieldtype": "Small Text",
+      "label": "Details"
+    },
+    {
+      "fieldname": "external_event_id",
+      "fieldtype": "Data",
+      "label": "External Event ID"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "NP Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

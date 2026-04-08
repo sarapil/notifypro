@@ -1,0 +1,35 @@
+/* Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+   Developer Website: https://arkan.it.com
+   License: MIT
+   For license information, please see license.txt */
+
+/* NotifyPro — Theme CSS
+ * Brand: Violet #7C3AED
+ * Domain: Unified Notification Hub
+ */
+
+:root {
+  --notifypro-primary: #7C3AED;
+  --notifypro-primary-dark: #6D28D9;
+  --notifypro-primary-light: #7C3AED33;
+  --notifypro-primary-subtle: #7C3AED0D;
+
+  --notifypro-bg: #FFFFFF;
+  --notifypro-bg-subtle: #F8FAFC;
+  --notifypro-text: #1E293B;
+  --notifypro-text-muted: #64748B;
+  --notifypro-border: #E2E8F0;
+
+  --notifypro-success: #10B981;
+  --notifypro-warning: #F59E0B;
+  --notifypro-danger: #EF4444;
+  --notifypro-info: #3B82F6;
+}
+
+body[data-theme="dark"] {
+  --notifypro-bg: #1E293B;
+  --notifypro-bg-subtle: #0F172A;
+  --notifypro-text: #F1F5F9;
+  --notifypro-text-muted: #94A3B8;
+  --notifypro-border: #334155;
+}

@@ -1,0 +1,29 @@
+/* Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+   Developer Website: https://arkan.it.com
+   License: MIT
+   For license information, please see license.txt */
+
+/* NotifyPro — CSS Variables
+ * Brand: Violet #7C3AED
+ */
+
+:root {
+  --np-violet: #7C3AED;
+  --np-violet-light: #A78BFA;
+  --np-violet-lighter: #DDD6FE;
+  --np-violet-dark: #6D28D9;
+  --np-violet-gradient: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%);
+
+  --np-accent: #7C3AED;
+  --np-accent-bg: rgba(124, 58, 237, 0.08);
+  --np-accent-hover: rgba(124, 58, 237, 0.15);
+
+  --np-sent: #10B981;
+  --np-failed: #EF4444;
+  --np-pending: #F59E0B;
+  --np-queued: #3B82F6;
+
+  --np-sidebar-width: 250px;
+  --np-border-radius: 8px;
+  --np-transition: all 0.2s ease;
+}
