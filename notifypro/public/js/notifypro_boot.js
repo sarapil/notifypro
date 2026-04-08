@@ -3,6 +3,8 @@
 // License: MIT
 
 // NotifyPro — Global Bootstrap
+// Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
+if (typeof frappe === "undefined" || typeof frappe.provide !== "function") { return; }
 frappe.provide("notifypro");
 
 notifypro.COLORS = {

@@ -7,7 +7,7 @@
 
     const APP_CONFIG = {
         name: "notifypro",
-        title: __("NotifyPro"),
+        title: "NotifyPro",
         color: "#7C3AED",
         module: "NotifyPro",
     };
