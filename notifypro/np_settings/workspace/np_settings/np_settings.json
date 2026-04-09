@@ -1,0 +1,163 @@
+{
+  "app": "notifypro",
+  "charts": [],
+  "content": "[{\"id\": \"sc_1\", \"type\": \"shortcut\", \"data\": {\"col\": 12}}, {\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Messages & Queue\", \"col\": 4}}, {\"id\": \"c_2\", \"type\": \"card\", \"data\": {\"card_name\": \"Channels\", \"col\": 4}}, {\"id\": \"c_3\", \"type\": \"card\", \"data\": {\"card_name\": \"Quick Setup\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "notification",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "NotifyPro",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Messages & Queue",
+      "link_count": 4,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Messages",
+      "link_to": "NP Message",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Queue",
+      "link_to": "NP Queue",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "In-App Notifications",
+      "link_to": "NP In-App Notification",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Scheduled Messages",
+      "link_to": "NP Scheduled Message",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Channels",
+      "link_count": 3,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Channels",
+      "link_to": "NP Channel",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Channel Providers",
+      "link_to": "NP Channel Provider",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Quick Setup",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Templates",
+      "link_to": "NP Template",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Settings",
+      "link_to": "NP Settings",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "NP Settings",
+  "name": "NotifyPro",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 1,
+  "shortcuts": [
+    {
+      "label": "Messages",
+      "link_to": "NP Message",
+      "type": "DocType",
+      "color": "Purple",
+      "doc_view": "List"
+    },
+    {
+      "label": "Queue",
+      "link_to": "NP Queue",
+      "type": "DocType",
+      "color": "Orange",
+      "doc_view": "List"
+    },
+    {
+      "label": "Channels",
+      "link_to": "NP Channel",
+      "type": "DocType",
+      "color": "Blue",
+      "doc_view": "List"
+    },
+    {
+      "label": "Templates",
+      "link_to": "NP Template",
+      "type": "DocType",
+      "color": "Green",
+      "doc_view": "List"
+    }
+  ],
+  "title": "NotifyPro"
+}

@@ -1,0 +1,96 @@
+{
+  "app": "notifypro",
+  "charts": [],
+  "content": "[{\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Analytics & Costs\", \"col\": 4}}, {\"id\": \"c_2\", \"type\": \"card\", \"data\": {\"card_name\": \"Delivery\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "chart-bar",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Analytics",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Analytics & Costs",
+      "link_count": 3,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Analytics Summary",
+      "link_to": "NP Analytics Summary",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Cost Records",
+      "link_to": "NP Cost Record",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Digests",
+      "link_to": "NP Digest",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Delivery",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Delivery Logs",
+      "link_to": "NP Delivery Log",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Batch Jobs",
+      "link_to": "NP Batch Job",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "Analytics",
+  "name": "NP Analytics",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "NotifyPro",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 4,
+  "shortcuts": [],
+  "title": "Analytics"
+}

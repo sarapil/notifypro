@@ -1,0 +1,76 @@
+{
+  "app": "notifypro",
+  "charts": [],
+  "content": "[{\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Routing\", \"col\": 4}}, {\"id\": \"c_2\", \"type\": \"card\", \"data\": {\"card_name\": \"Hooks & Triggers\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "route",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Routing & Rules",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Routing",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Routing Rules",
+      "link_to": "NP Routing Rule",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Escalation Rules",
+      "link_to": "NP Escalation Rule",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Hooks & Triggers",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Hook Triggers",
+      "link_to": "NP Hook Trigger",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "Routing",
+  "name": "NP Routing",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "NotifyPro",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 5,
+  "shortcuts": [],
+  "title": "Routing & Rules"
+}

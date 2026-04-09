@@ -1,0 +1,58 @@
+{
+  "app": "notifypro",
+  "charts": [],
+  "content": "[{\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Channel Management\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "broadcast",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Channels",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Channel Management",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Channels",
+      "link_to": "NP Channel",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Channel Providers",
+      "link_to": "NP Channel Provider",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "Channels",
+  "name": "NP Channels",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "NotifyPro",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 3,
+  "shortcuts": [],
+  "title": "Channels"
+}

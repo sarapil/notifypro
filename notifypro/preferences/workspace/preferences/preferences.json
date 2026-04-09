@@ -1,0 +1,78 @@
+{
+  "app": "notifypro",
+  "charts": [],
+  "content": "[{\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"User Preferences\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "settings",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Preferences",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "User Preferences",
+      "link_count": 4,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "User Preferences",
+      "link_to": "NP User Preference",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Notification Categories",
+      "link_to": "NP Notification Category",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Opt-Outs",
+      "link_to": "NP Opt-Out",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Suppression List",
+      "link_to": "NP Suppression List",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "Preferences",
+  "name": "NP Preferences",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "NotifyPro",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 6,
+  "shortcuts": [],
+  "title": "Preferences"
+}

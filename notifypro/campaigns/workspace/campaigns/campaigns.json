@@ -1,0 +1,76 @@
+{
+  "app": "notifypro",
+  "charts": [],
+  "content": "[{\"id\": \"c_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Campaigns\", \"col\": 4}}, {\"id\": \"c_2\", \"type\": \"card\", \"data\": {\"card_name\": \"Templates\", \"col\": 4}}]",
+  "creation": "2026-04-08 17:49:10.597531",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "megaphone",
+  "idx": 0,
+  "is_hidden": 0,
+  "label": "Campaigns",
+  "links": [
+    {
+      "type": "Card Break",
+      "label": "Campaigns",
+      "link_count": 2,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Campaigns",
+      "link_to": "NP Campaign",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 1
+    },
+    {
+      "type": "Link",
+      "label": "Segments",
+      "link_to": "NP Segment",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Card Break",
+      "label": "Templates",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    },
+    {
+      "type": "Link",
+      "label": "Templates",
+      "link_to": "NP Template",
+      "link_type": "DocType",
+      "link_count": 0,
+      "hidden": 0,
+      "is_query_report": 0,
+      "onboard": 0
+    }
+  ],
+  "modified": "2026-04-08 17:49:10.597531",
+  "modified_by": "Administrator",
+  "module": "Campaigns",
+  "name": "NP Campaigns",
+  "number_cards": [],
+  "owner": "Administrator",
+  "parent_page": "NotifyPro",
+  "public": 1,
+  "restrict_to_domain": "",
+  "roles": [],
+  "sequence_id": 2,
+  "shortcuts": [],
+  "title": "Campaigns"
+}
