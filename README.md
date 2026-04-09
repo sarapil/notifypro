@@ -57,8 +57,8 @@ bench --site your-site migrate
 
 ## Reports
 
-| Report | Module | Description |
-|--------|--------|-------------|
+| Report                 | Module    | Description                              |
+| ---------------------- | --------- | ---------------------------------------- |
 | Notification Analytics | Analytics | Delivery rates by channel with bar chart |
 
 ## Contributing
