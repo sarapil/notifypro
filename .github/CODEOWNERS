@@ -1,0 +1,49 @@
+# CODEOWNERS — مالكو الكود
+
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+#
+
+# These owners will be automatically requested for review when a PR
+
+# modifies files matching the patterns.
+
+# سيتم طلب مراجعة هؤلاء المالكين تلقائياً عند تعديل ملفات مطابقة.
+
+# ─── Default Owner — المالك الافتراضي ─────────────────────────────────────────
+
+-                           @sarapil/notifypro-maintainers
+
+# ─── Core Configuration — الإعدادات الأساسية ──────────────────────────────────
+
+**APP_NAME**/hooks.py @sarapil/**APP_NAME**-maintainers
+**APP_NAME**/install.py @sarapil/**APP_NAME**-maintainers
+**APP_NAME**/seed.py @sarapil/**APP_NAME**-maintainers
+pyproject.toml @sarapil/**APP_NAME**-maintainers
+setup.cfg @sarapil/**APP_NAME**-maintainers
+
+# ─── API Layer — طبقة الواجهة البرمجية ────────────────────────────────────────
+
+**APP_NAME**/api/ @sarapil/**APP_NAME**-maintainers
+
+# ─── Security & Permissions — الأمان والصلاحيات ───────────────────────────────
+
+**APP_NAME**/caps/ @sarapil/**APP_NAME**-maintainers
+SECURITY.md @sarapil/**APP_NAME**-maintainers
+
+# ─── CI/CD — خط الأنابيب ─────────────────────────────────────────────────────
+
+.github/workflows/ @sarapil/**APP_NAME**-maintainers
+
+# ─── Frontend — الواجهة الأمامية ──────────────────────────────────────────────
+
+**APP_NAME**/public/ @sarapil/**APP_NAME**-maintainers
+
+# ─── Translations — الترجمات ──────────────────────────────────────────────────
+
+**APP_NAME**/translations/ @sarapil/**APP_NAME**-maintainers
+
+# ─── Documentation — التوثيق ──────────────────────────────────────────────────
+
+**APP_NAME**/help/ @sarapil/**APP_NAME**-maintainers
+\*.md @sarapil/**APP_NAME**-maintainers
