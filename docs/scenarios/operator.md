@@ -1,4 +1,5 @@
 # NP Operator — Usage Scenarios
+
 # سيناريوهات استخدام — مشغل الإشعارات
 
 ## Role Overview
@@ -11,6 +12,7 @@
 ## Daily Scenarios (يومي)
 
 ### DS-001: Send Ad-Hoc Notification
+
 - **Goal**: Send a one-off notification to specific recipients
 - **Steps**:
   1. Use API or quick-send form
@@ -19,6 +21,7 @@
   4. Verify delivery in NP Notification Log
 
 ### DS-002: Clear Notification Queue
+
 - **Goal**: Process stuck items in the queue
 - **Steps**:
   1. Navigate to NP Core → NP Queue

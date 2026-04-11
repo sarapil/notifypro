@@ -1,4 +1,5 @@
 # NotifyPro — Entity Relationship Diagram
+
 # مخطط علاقات الكيانات — NotifyPro
 
 ```mermaid

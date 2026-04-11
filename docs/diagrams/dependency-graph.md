@@ -1,4 +1,5 @@
 # NotifyPro — Dependency Graph
+
 # مخطط التبعيات — NotifyPro
 
 ```mermaid

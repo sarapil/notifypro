@@ -1,4 +1,5 @@
 # NP Admin — Usage Scenarios
+
 # سيناريوهات استخدام — مدير النظام
 
 ## Role Overview
@@ -11,6 +12,7 @@
 ## Daily Scenarios (يومي)
 
 ### DS-001: Monitor Channel Health
+
 - **Goal**: Verify all notification channels are operational
 - **Steps**:
   1. Navigate to Channels workspace
@@ -19,6 +21,7 @@
   4. Verify: All channels show "Healthy" status
 
 ### DS-002: Review Failed Notifications
+
 - **Goal**: Identify and resolve delivery failures
 - **Steps**:
   1. Navigate to NP Core workspace
@@ -29,6 +32,7 @@
 ## Weekly Scenarios (أسبوعي)
 
 ### WS-001: Configure New Channel
+
 - **Goal**: Add a new notification channel
 - **Steps**:
   1. Navigate to Channels → NP Channel → New
@@ -39,6 +43,7 @@
 ## Monthly Scenarios (شهري)
 
 ### MS-001: Review Analytics
+
 - **Goal**: Analyze notification performance across channels
 - **Steps**:
   1. Navigate to Analytics workspace

@@ -4,6 +4,6 @@ Screen design specifications linked to role scenarios and `frappe_visual` compon
 
 ## Screens
 
-| Screen | File | Serves Scenarios |
-|--------|------|-----------------|
+| Screen    | File                         | Serves Scenarios       |
+| --------- | ---------------------------- | ---------------------- |
 | Dashboard | [dashboard.md](dashboard.md) | DS-001, WS-001, MS-001 |

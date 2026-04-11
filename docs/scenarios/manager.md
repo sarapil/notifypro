@@ -1,4 +1,5 @@
 # NP Manager — Usage Scenarios
+
 # سيناريوهات استخدام — مدير الإشعارات
 
 ## Role Overview
@@ -11,6 +12,7 @@
 ## Daily Scenarios (يومي)
 
 ### DS-001: Create Notification Template
+
 - **Goal**: Create a new message template for a channel
 - **Steps**:
   1. Navigate to Templates workspace → NP Template → New
@@ -19,6 +21,7 @@
   4. Save and enable
 
 ### DS-002: Launch Campaign
+
 - **Goal**: Send bulk notifications to a target audience
 - **Steps**:
   1. Navigate to Campaigns workspace → NP Campaign → New
@@ -29,6 +32,7 @@
 ## Weekly Scenarios (أسبوعي)
 
 ### WS-001: Review Campaign Performance
+
 - **Goal**: Assess campaign delivery and engagement
 - **Steps**:
   1. Navigate to Analytics workspace
