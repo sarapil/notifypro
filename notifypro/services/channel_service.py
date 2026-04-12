@@ -29,11 +29,29 @@ class ChannelService:
 
     @staticmethod
     def get_channel_provider(channel_name: str):
-        """Load the channel provider adapter for a given channel."""
+        """Load the channel provider adapter for a given channel.
+
+        If the NP Channel has an ``arrowz_provider`` field set and Arrowz is
+        installed, the Arrowz-backed provider is used for WhatsApp / Telegram
+        so that credentials and message logging are centralised in Arrowz.
+        """
         channel = frappe.get_cached_doc("NP Channel", channel_name)
+
+        # Arrowz-backed providers — preferred when available
+        arrowz_installed = "arrowz" in frappe.get_installed_apps()
+        use_arrowz = arrowz_installed and channel.get("arrowz_provider")
+
         provider_map = {
-            "WhatsApp": "notifypro.channels.whatsapp_provider.WhatsAppProvider",
-            "Telegram": "notifypro.channels.telegram_provider.TelegramProvider",
+            "WhatsApp": (
+                "notifypro.channels.arrowz_whatsapp_provider.ArrowzWhatsAppProvider"
+                if use_arrowz
+                else "notifypro.channels.whatsapp_provider.WhatsAppProvider"
+            ),
+            "Telegram": (
+                "notifypro.channels.arrowz_telegram_provider.ArrowzTelegramProvider"
+                if use_arrowz
+                else "notifypro.channels.telegram_provider.TelegramProvider"
+            ),
             "SMS": "notifypro.channels.sms_provider.SMSProvider",
             "Email": "notifypro.channels.email_provider.EmailProvider",
             "Push": "notifypro.channels.push_provider.PushProvider",
