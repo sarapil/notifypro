@@ -59,6 +59,7 @@ def get_user_preferences(user=None):
 
 @frappe.whitelist()
 def update_preference(channel, enabled=1, quiet_hours_start=None, quiet_hours_end=None):
+    frappe.only_for(["NP User", "NP Manager", "System Manager"])
     """Update notification preference for current user."""
     user = frappe.session.user
     existing = frappe.db.get_value("NP User Preference",
