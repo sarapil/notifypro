@@ -47,8 +47,8 @@ add_to_apps_screen = [
 ]
 
 # Includes in <head>
-# MEGA: app_include_css = ["/assets/notifypro/css/notifypro_combined.css"]
-# MEGA: app_include_js = ["/assets/notifypro/js/notifypro_combined.js"]
+app_include_css = ["/assets/notifypro/css/notifypro_combined.css"]
+app_include_js = ["/assets/notifypro/js/notifypro_combined.js"]
 
 # Installation
 before_install = "notifypro.install.before_install"
