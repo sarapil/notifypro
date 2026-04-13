@@ -1,0 +1,98 @@
+{% extends "templates/web.html" %}
+{% block title %}{{ _("NotifyPro Onboarding") }} | {{ _("بدء استخدام نظام الإشعارات") }}{% endblock %}
+
+{% block head_include %}
+<style>
+.np-onboard-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+.np-onboard-header { text-align: center; margin-bottom: 3rem; }
+.np-onboard-header h1 { color: #F97316; margin-bottom: 0.5rem; }
+.np-onboard-step {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border-left: 4px solid #F97316;
+}
+.np-step-number {
+    width: 40px;
+    height: 40px;
+    background: #F97316;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.np-step-content h3 { margin: 0 0 0.5rem 0; }
+.np-step-content p { margin: 0; color: var(--text-muted); }
+.np-step-link { color: #F97316; text-decoration: none; font-weight: 500; }
+.np-step-link:hover { text-decoration: underline; }
+.np-tips { background: rgba(249, 115, 22, 0.1); border-radius: 12px; padding: 1.5rem; margin-top: 2rem; }
+.np-tips h3 { color: #F97316; margin-bottom: 1rem; }
+.np-tips ul { margin: 0; padding-inline-start: 1.5rem; }
+.np-tips li { margin-bottom: 0.5rem; }
+[dir="rtl"] .np-onboard-step { border-left: none; border-right: 4px solid #F97316; }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="np-onboard-container">
+    <header class="np-onboard-header">
+        <h1>🚀 {{ _("Welcome to NotifyPro") }}</h1>
+        <p>{{ _("Follow these steps to set up your notification system") }}</p>
+        <p>{{ _("اتبع هذه الخطوات لإعداد نظام الإشعارات") }}</p>
+    </header>
+
+    <div class="np-onboard-steps">
+        <div class="np-onboard-step">
+            <div class="np-step-number">1</div>
+            <div class="np-step-content">
+                <h3>{{ _("Configure Channels") }}</h3>
+                <p>{{ _("Set up your notification channels: Email SMTP, SMS gateway, WhatsApp Business API, and Push notification credentials.") }}</p>
+                <a href="/app/np-channel" class="np-step-link">→ {{ _("Go to Channels") }}</a>
+            </div>
+        </div>
+
+        <div class="np-onboard-step">
+            <div class="np-step-number">2</div>
+            <div class="np-step-content">
+                <h3>{{ _("Create Templates") }}</h3>
+                <p>{{ _("Design notification templates with placeholders for dynamic content. Use Jinja2 syntax for personalization.") }}</p>
+                <a href="/app/np-template" class="np-step-link">→ {{ _("Go to Templates") }}</a>
+            </div>
+        </div>
+
+        <div class="np-onboard-step">
+            <div class="np-step-number">3</div>
+            <div class="np-step-content">
+                <h3>{{ _("Set Up Rules") }}</h3>
+                <p>{{ _("Create notification rules to automatically trigger notifications based on DocType events or schedules.") }}</p>
+                <a href="/app/np-rule" class="np-step-link">→ {{ _("Go to Rules") }}</a>
+            </div>
+        </div>
+
+        <div class="np-onboard-step">
+            <div class="np-step-number">4</div>
+            <div class="np-step-content">
+                <h3>{{ _("Test & Monitor") }}</h3>
+                <p>{{ _("Send test notifications and monitor delivery status in the notification log.") }}</p>
+                <a href="/app/np-notification-log" class="np-step-link">→ {{ _("Go to Logs") }}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="np-tips">
+        <h3>💡 {{ _("Quick Tips") }}</h3>
+        <ul>
+            <li>{{ _("Start with Email channel - it's the most reliable for testing") }}</li>
+            <li>{{ _("Use {{ doc.field_name }} syntax in templates for dynamic content") }}</li>
+            <li>{{ _("Enable retry logic for critical notifications") }}</li>
+            <li>{{ _("Set user preferences to respect opt-out requests") }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

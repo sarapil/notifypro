@@ -71,3 +71,125 @@ body[data-theme="dark"] {
 }
 
 
+
+/* ═══════════════════════════════════════════════════════════════════════
+   NotifyPro Scene Dashboard & KPI Grid Styles
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Scene Container ─────────────────────────────────────────────────── */
+.notifypro-scene-container {
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius-xl, 16px);
+    overflow: hidden;
+    min-height: 200px;
+}
+
+/* ── KPI Grid ────────────────────────────────────────────────────────── */
+.notifypro-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.notifypro-kpi-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-lg, 12px);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(91, 33, 182, 0.05));
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.notifypro-kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
+    border-color: var(--notifypro-primary, #7C3AED);
+}
+
+.notifypro-kpi-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.notifypro-kpi-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--notifypro-primary, #7C3AED);
+    line-height: 1.2;
+}
+
+.notifypro-kpi-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* ── Visual FX Classes ───────────────────────────────────────────────── */
+.fv-fx-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fv-fx-hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fv-fx-hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+.fv-fx-page-enter {
+    animation: fadeSlideIn 0.5s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── RTL Support ─────────────────────────────────────────────────────── */
+[dir="rtl"] .notifypro-kpi-grid {
+    direction: rtl;
+}
+
+/* ── Dark Mode ───────────────────────────────────────────────────────── */
+[data-theme="dark"] .notifypro-kpi-card {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(91, 33, 182, 0.1));
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+[data-theme="dark"] .fv-fx-glass {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .notifypro-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .notifypro-kpi-value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notifypro-kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}

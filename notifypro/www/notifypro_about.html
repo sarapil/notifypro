@@ -1,0 +1,121 @@
+{% extends "templates/web.html" %}
+{% block title %}{{ _("About NotifyPro") }} | {{ _("عن نظام الإشعارات") }}{% endblock %}
+
+{% block head_include %}
+<style>
+.np-about-hero {
+    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 0 0 2rem 2rem;
+}
+.np-about-hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.np-about-hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+.np-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.np-feature-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+.np-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.15);
+}
+.np-feature-icon { font-size: 2rem; margin-bottom: 1rem; }
+.np-feature-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+.np-feature-desc { color: var(--text-muted); }
+.np-channels { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; padding: 2rem; }
+.np-channel { text-align: center; padding: 1.5rem; }
+.np-channel-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.np-cta { text-align: center; padding: 3rem; background: var(--subtle-bg); }
+.np-cta-btn { display: inline-block; background: #F97316; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.np-cta-btn:hover { background: #EA580C; }
+[dir="rtl"] .np-features-grid, [dir="rtl"] .np-channels { direction: rtl; }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="np-about-page">
+    <!-- Hero Section -->
+    <section class="np-about-hero">
+        <h1>🔔 {{ _("NotifyPro") }}</h1>
+        <p>{{ _("Unified Notification Center for Frappe/ERPNext") }}</p>
+        <p>{{ _("مركز إشعارات موحد لـ Frappe/ERPNext") }}</p>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="np-features-grid">
+        <div class="np-feature-card">
+            <div class="np-feature-icon">📱</div>
+            <h3 class="np-feature-title">{{ _("Multi-Channel Delivery") }}</h3>
+            <p class="np-feature-desc">{{ _("Send notifications via Email, SMS, WhatsApp, Push, and In-App channels") }}</p>
+        </div>
+        <div class="np-feature-card">
+            <div class="np-feature-icon">📋</div>
+            <h3 class="np-feature-title">{{ _("Template Management") }}</h3>
+            <p class="np-feature-desc">{{ _("Create reusable templates with Jinja2 variables for personalized messages") }}</p>
+        </div>
+        <div class="np-feature-card">
+            <div class="np-feature-icon">📊</div>
+            <h3 class="np-feature-title">{{ _("Delivery Analytics") }}</h3>
+            <p class="np-feature-desc">{{ _("Track delivery rates, open rates, and engagement metrics in real-time") }}</p>
+        </div>
+        <div class="np-feature-card">
+            <div class="np-feature-icon">🔄</div>
+            <h3 class="np-feature-title">{{ _("Retry Logic") }}</h3>
+            <p class="np-feature-desc">{{ _("Automatic retry with exponential backoff for failed deliveries") }}</p>
+        </div>
+        <div class="np-feature-card">
+            <div class="np-feature-icon">🎯</div>
+            <h3 class="np-feature-title">{{ _("User Preferences") }}</h3>
+            <p class="np-feature-desc">{{ _("Let users control their notification preferences per channel") }}</p>
+        </div>
+        <div class="np-feature-card">
+            <div class="np-feature-icon">🛡️</div>
+            <h3 class="np-feature-title">{{ _("CAPS Integration") }}</h3>
+            <p class="np-feature-desc">{{ _("Fine-grained permissions with capability-based access control") }}</p>
+        </div>
+    </section>
+
+    <!-- Supported Channels -->
+    <section class="np-channels">
+        <div class="np-channel">
+            <div class="np-channel-icon">📧</div>
+            <div>{{ _("Email") }}</div>
+        </div>
+        <div class="np-channel">
+            <div class="np-channel-icon">💬</div>
+            <div>{{ _("SMS") }}</div>
+        </div>
+        <div class="np-channel">
+            <div class="np-channel-icon">📲</div>
+            <div>{{ _("WhatsApp") }}</div>
+        </div>
+        <div class="np-channel">
+            <div class="np-channel-icon">🔔</div>
+            <div>{{ _("Push") }}</div>
+        </div>
+        <div class="np-channel">
+            <div class="np-channel-icon">💻</div>
+            <div>{{ _("In-App") }}</div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="np-cta">
+        <h2>{{ _("Ready to streamline your notifications?") }}</h2>
+        <p>{{ _("هل أنت مستعد لتبسيط إشعاراتك؟") }}</p>
+        <a href="/desk/notifypro" class="np-cta-btn">{{ _("Get Started") }} →</a>
+    </section>
+</div>
+{% endblock %}
