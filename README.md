@@ -79,3 +79,10 @@ See [SECURITY.md](SECURITY.md) for vulnerability reporting.
 ## License
 
 MIT — See [license.txt](license.txt)
+
+## Contact
+
+For support and inquiries:
+- Phone: +201508268982
+- WhatsApp: https://wa.me/201508268982
+
